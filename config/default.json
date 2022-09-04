@@ -1,9 +1,9 @@
 {
     "SECRET_KEY": "ahhhhhhhhhh",
 
-    "MYSQL_HOST": "192.168.50.192",
+    "MYSQL_HOST": "localhost",
     "MYSQL_USER": "root",
-    "MYSQL_PASSWORD": "j&2bVtvwH",
+    "MYSQL_PASSWORD": "password",
     "DATABASE": "wikipedia_speedruns",
     "MAIL_USE_TLS": true
 }
