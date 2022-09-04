@@ -59,17 +59,11 @@ var customPlay = {
                 <div class="col-sm mb-2 mb-sm-0">
                     <div class="input-group flex-nowrap">
                         <ac-input :text.sync="start" placeholder="Start Article"></ac-input>
-                        <button type="button" class="btn border quick-play" @click="generateRndPrompt('start')">
-                            <i class="bi bi-shuffle"></i>
-                        </button>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="input-group flex-nowrap">
                         <ac-input :text.sync="end" placeholder="End Article"></ac-input>
-                        <button type="button" class="btn border quick-play" @click="generateRndPrompt('end')">
-                            <i class="bi bi-shuffle"></i>
-                        </button>
                     </div>
                 </div>
                 <p v-if="articleCheckMessage" class="text-danger mb-0">{{articleCheckMessage}}</p>

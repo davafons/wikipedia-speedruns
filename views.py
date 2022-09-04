@@ -90,9 +90,9 @@ def get_confirm_page(token):
     return render_with_data('users/confirm_email.html', token=token)
 
 # sprint pages
-@views.route('/play/tutorial', methods=['GET'])
-def get_tutorial_page():
-    return render_with_data('tutorial.html')
+# @views.route('/play/tutorial', methods=['GET'])
+# def get_tutorial_page():
+#     return render_with_data('tutorial.html')
 
 @views.route('/play/<int:id>', methods=['GET'])
 def get_sprint_play_page(id):
@@ -189,9 +189,9 @@ def get_lobby_page(lobby_id):
 
 
 # Generator
-@views.route('/generator', methods=['GET'])
-def get_generator_page():
-    return render_with_data('generator.html')
+# @views.route('/generator', methods=['GET'])
+# def get_generator_page():
+#     return render_with_data('generator.html')
 
 
 # Admin pages
