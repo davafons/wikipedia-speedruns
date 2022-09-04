@@ -1,9 +1,9 @@
 {
     "SECRET_KEY": "ahhhhhhhhhh",
 
-    "MYSQL_HOST": "127.0.0.1",
-    "MYSQL_USER": "user",
-    "MYSQL_PASSWORD": null,
+    "MYSQL_HOST": "192.168.50.192",
+    "MYSQL_USER": "root",
+    "MYSQL_PASSWORD": "j&2bVtvwH",
     "DATABASE": "wikipedia_speedruns",
     "MAIL_USE_TLS": true
 }

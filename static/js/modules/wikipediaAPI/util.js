@@ -1,10 +1,11 @@
 async function getArticle(page, isMobile) {
     const resp = await fetch(
-        `https://en.wikipedia.org/w/api.php?redirects=1&disableeditsection=true&format=json&origin=*&action=parse&prop=text&page=${page}${isMobile ? '&mobileformat=1' : ''}`,
+        `https://ja.wikipedia.org/w/api.php?redirects=1&disableeditsection=true&format=json&origin=*&action=parse&prop=text&page=${page}${isMobile ? '&mobileformat=1' : ''}`,
         {
             mode: "cors"
         }
     )
+
     const body = await resp.json()
 
     if ("error" in body) {
@@ -16,7 +17,7 @@ async function getArticle(page, isMobile) {
 
 async function getArticleTitle(title) {
     const resp = await fetch(
-        `https://en.wikipedia.org/w/api.php?redirects=1&format=json&origin=*&action=parse&prop=displaytitle&page=${title}`, {
+        `https://ja.wikipedia.org/w/api.php?redirects=1&format=json&origin=*&action=parse&prop=displaytitle&page=${title}`, {
             mode: "cors"
         }
     )
@@ -38,7 +39,7 @@ async function articleCheck(title) {
     }
 
     const resp = await fetch(
-        `https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&prop=categories&titles=${title}&cllimit=10`, {
+        `https://ja.wikipedia.org/w/api.php?action=query&origin=*&format=json&prop=categories&titles=${title}&cllimit=10`, {
             mode: "cors"
         }
     )
@@ -96,7 +97,7 @@ async function checkArticles(start, end) {
 async function getArticleSummary(page) {
     const encodedPage = encodeURIComponent(page);
     const resp = await fetch(
-        `https://en.wikipedia.org/api/rest_v1/page/summary/${encodedPage}`,
+        `https://ja.wikipedia.org/api/rest_v1/page/summary/${encodedPage}`,
         {
             mode: "cors"
         }
@@ -107,9 +108,9 @@ async function getArticleSummary(page) {
 }
 
 async function getAutoCompleteArticles(search, numEntries = 5){
-    // https://en.wikipedia.org/w/api.php?action=opensearch&format=json&formatversion=2&search=a&namespace=0&limit=10
+    // https://ja.wikipedia.org/w/api.php?action=opensearch&format=json&formatversion=2&search=a&namespace=0&limit=10
     const resp = await fetch(
-        `https://en.wikipedia.org/w/api.php?action=opensearch&origin=*&format=json&formatversion=2&search=${search}&namespace=0&limit=${numEntries}`,
+        `https://ja.wikipedia.org/w/api.php?action=opensearch&origin=*&format=json&formatversion=2&search=${search}&namespace=0&limit=${numEntries}`,
         {
             mode: "cors"
         }

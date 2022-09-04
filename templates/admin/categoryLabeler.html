@@ -275,7 +275,7 @@
     <script>
     async function getRandomArticles() {
         const url =
-        "https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&list=random&rnlimit=15";
+        "https://ja.wikipedia.org/w/api.php?action=query&origin=*&format=json&list=random&rnlimit=15";
         const resp = await fetch(url, { mode: "cors" });
         const body = await resp.json();
         return body["query"]["random"];
@@ -285,7 +285,7 @@
         let output = [];
         let categoryNames = [];
 
-        let url = `https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&list=categorymembers&cmtitle=${categoryTitle}&cmtype=subcat`;
+        let url = `https://ja.wikipedia.org/w/api.php?action=query&origin=*&format=json&list=categorymembers&cmtitle=${categoryTitle}&cmtype=subcat`;
         const resp = await fetch(url, { mode: "cors" });
         const body = await resp.json();
         const subcats = body["query"]["categorymembers"];
@@ -293,7 +293,7 @@
         categoryNames.push(categoryTitle);
 
         categoryNames.forEach(async function (sc) {
-        url = `https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&list=categorymembers&cmtitle=${sc}`;
+        url = `https://ja.wikipedia.org/w/api.php?action=query&origin=*&format=json&list=categorymembers&cmtitle=${sc}`;
         const scresp = await fetch(url, { mode: "cors" });
         const scbody = await scresp.json();
         scbody["query"]["categorymembers"].forEach(function (m) {
