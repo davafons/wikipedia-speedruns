@@ -216,9 +216,9 @@ def get_labeler_page():
     return render_with_data('admin/categoryLabeler.html')
 
 
-@views.route('/devblog', methods=['GET'])
-def get_devblog_page():
-    return render_with_data('devblog/blog.html')
+# @views.route('/devblog', methods=['GET'])
+# def get_devblog_page():
+#     return render_with_data('devblog/blog.html')
 
 
 # Error pages

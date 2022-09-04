@@ -78,13 +78,7 @@ var customPlay = {
 
             <div class="gap-2 d-flex justify-content-center justify-content-md-start my-3">
                 <button type="button" class="btn quick-play" v-on:click="playCustom">Play Now</button>
-                <button type="button" class="btn quick-play" v-on:click="playRandom">I'm Feeling Lucky</button>
             </div>
-
-            <details>
-                <summary>Random Article Generator Settings</summary>
-                <prompt-generator ref="pg"></prompt-generator>
-            </details>
         </div>
     `)
 };
